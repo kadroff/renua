@@ -43,14 +43,30 @@
   padding: 24px;
   font-size: 20px;
   background-color: inherit;
-
-  &.opened {
-    background-color: #ffffff;
-  }
+  z-index: 10;
 
   & img,
   & a:after {
     mix-blend-mode: difference;
+  }
+
+  & a {
+    color: #ffffff;
+  }
+
+  &.opened {
+    background-color: #ffffff;
+
+    & a {
+      color: #0d0d0d;
+    }
+
+    & nav {
+      & .page-header__menu-close,
+      & a {
+        mix-blend-mode: normal;
+      }
+    }
   }
 
   & .location {

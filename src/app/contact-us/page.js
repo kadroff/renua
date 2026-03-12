@@ -613,7 +613,7 @@ const Page = () => {
                       className="contact-us__file-x"
                       onClick={() => removeFile(index)}
                     >
-                      ×
+                      <img src="/favicon/Group 1.png" alt="remove" />
                     </span>
                     <span className="contact-us__file-name">{file.name}</span>
                   </li>

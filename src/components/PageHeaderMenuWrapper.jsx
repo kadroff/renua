@@ -13,7 +13,7 @@ const PageHeaderMenuWrapper = ({isOpen, setIsOpen }) => {
           Our Works
         </button>
       )}
-      <Link href="/contact-us">
+      <Link href="/contact-us" className="page-header__touch">
         Get in touch
       </Link>
 
