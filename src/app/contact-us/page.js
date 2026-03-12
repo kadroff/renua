@@ -288,7 +288,7 @@ const Page = () => {
         setWithoutImage(false);
         setAttachmentsCount(0);
       };
-      sendToSlackNoFiles();
+      // sendToSlackNoFiles();
     }
   }, [isWithoutImage, isCompressed, client, selectedServices]);
 
@@ -460,7 +460,7 @@ const Page = () => {
     };
 
     if ((imageUrls.length > 0 && isCompressed && imageUrls.length === compressedFiles.length) || isWithoutImage) {
-      sendToSlack();
+      // sendToSlack();
     }
   }, [imageUrls, isCompressed, isWithoutImage, client, selectedServices, compressedFiles.length]);
 
