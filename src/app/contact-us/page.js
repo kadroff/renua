@@ -151,8 +151,23 @@ const Page = () => {
       emailjs.send('service_o7pozcc', 'template_gnnit8n', templateParams)
         .then(function(response) {
           console.log('Email sent successfully:', response);
+          setSuccess(true);
+          setLoading(false);
+          setTimeout(() => {
+            setSuccess(false);
+            formRef.current?.reset();
+            setFiles([]);
+            setSelectedServices([]);
+            setClient({ from_name: '', email: '', details: '' });
+          }, 3000);
         }, function(error) {
           console.error('Email sending failed:', error);
+          setFail(true);
+          setLoading(false);
+          setTimeout(() => {
+            setFail(false);
+            formRef.current?.reset();
+          }, 3000);
         });
     }
   }, [isWithoutImage, isCompressed, client, selectedServices]);
@@ -173,11 +188,32 @@ const Page = () => {
       emailjs.send('service_o7pozcc', 'template_gnnit8n', templateParams)
         .then(function(response) {
           console.log('Email sent successfully:', response);
+          setSuccess(true);
+          setLoading(false);
+          setCompressedFiles([]);
+          setAttachmentsCount(0);
+          setUrls([]);
+          setTimeout(() => {
+            setSuccess(false);
+            formRef.current?.reset();
+            setFiles([]);
+            setSelectedServices([]);
+            setClient({ from_name: '', email: '', details: '' });
+          }, 3000);
         }, function(error) {
           console.error('Email sending failed:', error);
+          setFail(true);
+          setLoading(false);
+          setCompressedFiles([]);
+          setAttachmentsCount(0);
+          setUrls([]);
+          setTimeout(() => {
+            setFail(false);
+            formRef.current?.reset();
+          }, 3000);
         });
     }
-  }, [imageUrls, isCompressed, client, selectedServices]);
+  }, [imageUrls, isCompressed, client, selectedServices, compressedFiles.length]);
 
   // Загрузка файлов в Firebase
   useEffect(() => {
