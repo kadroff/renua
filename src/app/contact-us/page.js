@@ -153,6 +153,8 @@ const Page = () => {
           console.log('Email sent successfully:', response);
           setSuccess(true);
           setLoading(false);
+          setWithoutImage(false);
+          setCompressed(false);
           setTimeout(() => {
             setSuccess(false);
             formRef.current?.reset();
@@ -164,6 +166,8 @@ const Page = () => {
           console.error('Email sending failed:', error);
           setFail(true);
           setLoading(false);
+          setWithoutImage(false);
+          setCompressed(false);
           setTimeout(() => {
             setFail(false);
             formRef.current?.reset();
@@ -193,6 +197,7 @@ const Page = () => {
           setCompressedFiles([]);
           setAttachmentsCount(0);
           setUrls([]);
+          setCompressed(false);
           setTimeout(() => {
             setSuccess(false);
             formRef.current?.reset();
@@ -207,6 +212,7 @@ const Page = () => {
           setCompressedFiles([]);
           setAttachmentsCount(0);
           setUrls([]);
+          setCompressed(false);
           setTimeout(() => {
             setFail(false);
             formRef.current?.reset();
