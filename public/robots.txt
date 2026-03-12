@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://renua.one
+
+# Sitemaps
+Sitemap: https://renua.one/sitemap.xml
