@@ -106,7 +106,6 @@ textarea {
 
 .contact-us__textarea {
   resize: vertical;
-  min-height: 0px;
   resize: none;
 }
 

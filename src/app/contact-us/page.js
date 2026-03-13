@@ -577,7 +577,7 @@ const Page = () => {
                 handleInputChange(e);
                 handleFormChange();
               }}
-              rows={4}
+              rows={1}
               required
             />
             <label htmlFor="details" className="contact-us__label">Please tell us about your project</label>
