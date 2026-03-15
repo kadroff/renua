@@ -5,7 +5,9 @@ import PageInfo from "@/components/PageInfo";
 export default function Home() {
   return (
     <>
+      <PageHeader />
       <PageInfo />
+      <PageFooter />
     </>
   );
 }

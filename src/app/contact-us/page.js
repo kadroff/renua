@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState, useRef } from "react";
+import PageHeader from "@/components/PageHeader";
 import "./style.css";
 import ContactUsFooter from "@/components/ContactUsFooter";
 import ContactUsWarning from "@/components/ContactUsWarning";
@@ -512,7 +513,9 @@ const Page = () => {
   }
 
   return (
-    <article className="contact-us">
+    <>
+      <PageHeader />
+      <article className="contact-us">
       <div className="contact-us__container">
         <h1 className="contact-us__title">Write to Renua</h1>
         <p className="contact-us__descr">We&apos;d love to hear from you and your team</p>
@@ -649,6 +652,7 @@ const Page = () => {
         />
       ) : null}
     </article>
+    </>
   );
 };
 

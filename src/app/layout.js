@@ -1,10 +1,8 @@
 
-import PageHeader from "@/components/PageHeader";
 import "./globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import PageFooter from "@/components/PageFooter";
-import ContactUsFooter from "@/components/ContactUsFooter";
 import Script from "next/script";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata = {
   title: {
@@ -62,9 +60,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="app">
-          <PageHeader />
+        <PageHeader />
           {children}
-          <PageFooter />
         </div>
       </body>
       <GoogleAnalytics gaId="G-54E24VX7E5" />

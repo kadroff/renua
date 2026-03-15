@@ -1,7 +1,8 @@
 .contact-us {
   padding-top: 144px;
-  padding-bottom: 100px;
+  padding-bottom: 16px;
   min-height: 100vh;
+  width: 100%
 }
 
 .contact-us__container {
@@ -265,6 +266,7 @@ textarea {
   cursor: pointer;
   transition: all 0.2s ease;
   margin-top: 16px;
+  margin-bottom: 112px;
   font-family: "Neue Montreal", sans-serif;
 }
 
@@ -286,11 +288,17 @@ textarea {
 
 /* Contact Us Footer */
 .contact-us-footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  width: 100%;
+  max-width: 100%;
   padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  box-sizing: border-box;
+}
+
+.contact-us-footer__links {
   display: flex;
   align-items: center;
   gap: 36px;
@@ -408,6 +416,7 @@ body:has(.contact-us) .page-footer {
     padding: 12px 20px;
     font-size: 20px;
     color: #FFF;
+    margin-bottom: 68px;
   }
 
   .contact-us__file-item {
@@ -420,22 +429,32 @@ body:has(.contact-us) .page-footer {
     padding: 20px;
   }
 
+  .contact-us-footer__links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
   .contact-us-footer span {
     width: 100%;
-    margin-right: 0;
     margin-bottom: 8px;
   }
 
   .contact-us-footer a {
     padding-right: 0;
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .contact-us-footer a.mail::before {
-    content: "hey@renua.one";
+    /* content: "hey@renua.one"; */
   }
 
   .contact-us-footer a::after {
     display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-us__submit {
+    margin-bottom: 24px;
   }
 }
