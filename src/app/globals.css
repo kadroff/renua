@@ -1,6 +1,10 @@
 @import url(normalize.css);
 @import url(reset.css);
 
+.page-header__menu-close {
+  color: black
+}
+
 @font-face {
   font-family: "Neue Montreal";
   src:

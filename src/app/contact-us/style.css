@@ -279,7 +279,7 @@ textarea {
 .contact-us__submit--disabled,
 .contact-us__submit:disabled {
   background-color: #F1F1F1;
-  color: #84858C;
+  color: #FFF;
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -358,11 +358,11 @@ body:has(.contact-us) .page-footer {
   }
 
   .contact-us__title {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .contact-us__descr {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 32px;
   }
 
@@ -381,28 +381,33 @@ body:has(.contact-us) .page-footer {
   }
 
   .contact-us__input {
-    font-size: 14px;
+    font-size: 20px;
+    color: #0D0D0D;
   }
 
   .contact-us__label {
-    font-size: 14px;
+    font-size: 20px;
+    color: #0D0D0D;
   }
 
   .contact-us__input:focus + .contact-us__label,
   .contact-us__input:not(:placeholder-shown) + .contact-us__label,
   .contact-us__textarea:focus + .contact-us__label,
   .contact-us__textarea:not(:placeholder-shown) + .contact-us__label {
-    font-size: 12px;
+    font-size: 16px;
+    color: #84858C;
   }
 
   .contact-us__file-label {
     padding: 12px 20px;
-    font-size: 14px;
+    font-size: 16px;
+    color: #84858C;
   }
 
   .contact-us__submit {
     padding: 12px 20px;
-    font-size: 14px;
+    font-size: 20px;
+    color: #FFF;
   }
 
   .contact-us__file-item {
