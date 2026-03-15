@@ -580,7 +580,7 @@ const Page = () => {
                 handleInputChange(e);
                 handleFormChange();
               }}
-              rows={1}
+              rows={4}
               required
             />
             <label htmlFor="details" className="contact-us__label">Please tell us about your project</label>
