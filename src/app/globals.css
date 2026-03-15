@@ -185,10 +185,29 @@
     width: 62.5%;
     aspect-ratio: 1000/650;
     overflow: hidden;
+    position: relative;
 
     & video {
       width: 100%;
       border-radius: 8px;
+    }
+
+    .page-menu__video-loader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #F1F1F1;;
+      border-radius: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+
+      &.loading {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 

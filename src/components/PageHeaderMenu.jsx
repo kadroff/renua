@@ -83,6 +83,7 @@ const PageHeaderMenu = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const videoRef = useRef(null);
   const preloadedRefs = useRef({});
@@ -137,6 +138,7 @@ const PageHeaderMenu = () => {
     if (!isDesktop) return;
 
     if (videoRef.current && activeItem.video) {
+      setIsLoading(true);
       videoRef.current.src = activeItem.video;
       videoRef.current.load();
     }
@@ -176,7 +178,18 @@ const PageHeaderMenu = () => {
 
       <div className="page-menu__video-wrapper">
         {isDesktop && activeItem.isReleased && (
-          <video ref={videoRef} muted playsInline autoPlay loop />
+          <>
+            <div className={`page-menu__video-loader ${isLoading ? "loading" : ""}`}></div>
+            <video
+              ref={videoRef}
+              muted
+              playsInline
+              autoPlay
+              loop
+              onLoadedData={() => setIsLoading(false)}
+              onError={() => setIsLoading(false)}
+            />
+          </>
         )}
       </div>
     </div>
