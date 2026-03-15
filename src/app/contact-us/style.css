@@ -298,6 +298,15 @@ textarea {
   box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+  .contact-us-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
 .contact-us-footer__links {
   display: flex;
   align-items: center;
